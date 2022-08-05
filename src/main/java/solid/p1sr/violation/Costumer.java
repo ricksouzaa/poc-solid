@@ -12,6 +12,7 @@ import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.time.LocalDate;
 
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
@@ -23,7 +24,7 @@ public class Costumer {
   private String name;
   private String email;
   private String phoneNumber;
-  private Date birthday;
+  private LocalDate birthday;
   private String registration;
 
   public String addCostumer(Costumer costumer) throws SQLException, EmailException {
@@ -44,7 +45,7 @@ public class Costumer {
       ps.setString(1, costumer.getName());
       ps.setString(2, costumer.getEmail());
       ps.setString(3, costumer.getPhoneNumber());
-      ps.setDate(4, costumer.getBirthday());
+      ps.setDate(4, Date.valueOf(costumer.getBirthday()));
       ps.setString(5, costumer.getRegistration());
 
       ps.executeUpdate();

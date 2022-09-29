@@ -1,6 +1,6 @@
 package solid.p3ls.violation;
 
-public class AreaCalculation {
+public class AreaCalculator {
 
   public static void main(String[] args) {
     Rectangle rectangle = new Rectangle(10, 5);

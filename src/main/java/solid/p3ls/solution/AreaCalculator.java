@@ -1,6 +1,6 @@
 package solid.p3ls.solution;
 
-public class AreaCalculation {
+public class AreaCalculator {
 
   public static void main(String[] args) {
 
